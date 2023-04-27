@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'redo_music_library'
+    'redo_music_library',
+    'corsheaders',    
 ]
 
 MIDDLEWARE = [
@@ -49,8 +50,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
-
+CORS_ORIGIN_ALLOW_ALL=True;
 ROOT_URLCONF = 'redo_music_library_project.urls'
 
 TEMPLATES = [
@@ -74,7 +76,6 @@ WSGI_APPLICATION = 'redo_music_library_project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
 
 
 
